@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Net to Gross Calculator — Non-FTE offers · Urban Company</title>
+<link rel="icon" href="data:image/jpeg;base64,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">
+<style>
+  :root{--ink:#0f0f0f;--ink-2:#3d3d3d;--muted:#757575;--line:#e8e8e8;--bg:#f6f6f7;--brand:#6e42e5;--brand-2:#5a32d0;--brand-soft:#f1ecff;--green:#0e8a5f;--green-soft:#e7f6ef;--red:#c4372f;--amber-soft:#fff6e5;--amber:#8a5a00}
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.45}
+  .num{font-variant-numeric:tabular-nums}
+
+  header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+  .bar{max-width:1120px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:12px}
+  .bar img{width:36px;height:36px;border-radius:9px;display:block}
+  .brand-name{font-weight:700;font-size:17px;letter-spacing:-.01em}
+  .tabs{border-top:1px solid #f0f0f0}
+  .tabs-in{max-width:1120px;margin:0 auto;padding:0 20px;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+  .tabs-in::-webkit-scrollbar{display:none}
+  .tabs a{flex:none;text-decoration:none;color:var(--muted);font-size:14px;font-weight:600;padding:12px 14px;border-bottom:2.5px solid transparent;white-space:nowrap}
+  .tabs a:hover{color:var(--ink)}
+  .tabs a.on{color:var(--ink);border-bottom-color:var(--brand)}
+
+  .tabs{border-top:1px solid #f0f0f0}
+  .tabs-in{max-width:1120px;margin:0 auto;padding:0 20px;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+  .tabs-in::-webkit-scrollbar{display:none}
+  .tabs a{flex:none;text-decoration:none;color:var(--muted);font-size:14px;font-weight:600;padding:12px 14px;border-bottom:2.5px solid transparent;white-space:nowrap}
+  .tabs a:hover{color:var(--ink)}
+  .tabs a.on{color:var(--ink);border-bottom-color:var(--brand)}
+  .hero{background:#0f0f0f;color:#fff}
+  .hero-in{max-width:1120px;margin:0 auto;padding:40px 20px 96px}
+  .hero h1{font-size:clamp(26px,4vw,40px);line-height:1.12;letter-spacing:-.02em;margin:0 0 10px;font-weight:800}
+  .hero p{color:#bdbdbd;max-width:680px;margin:0;font-size:16px}
+
+  main{max-width:1120px;margin:-64px auto 0;padding:0 20px 48px;display:flex;flex-direction:column;gap:16px}
+  main[hidden]{display:none!important}
+  main > *{width:100%;min-width:0}
+  main.calc{max-width:760px}
+  .card{background:#fff;border-radius:16px;box-shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.06);border:1px solid #efefef;overflow:hidden}
+  .card-h{padding:22px 24px 10px}
+  .card-h h2{font-size:16px;margin:0;font-weight:700}
+  .card-h .hint{margin-top:4px}
+
+  /* Calculator */
+  .calc-card{padding:28px}
+  @media (max-width:600px){.calc-card{padding:20px}}
+  .sec-t{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin:0 0 14px}
+  .calc-fields{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}
+  .calc-fields .full{grid-column:1 / -1}
+  @media (max-width:600px){.calc-fields{grid-template-columns:1fr}}
+  .field{margin-bottom:18px}
+  label{display:block;font-size:13px;font-weight:600;color:var(--ink-2);margin-bottom:8px}
+  .hint{font-size:12px;color:var(--muted);margin-top:6px}
+  .money{display:flex;align-items:center;border:1.5px solid var(--line);border-radius:12px;padding:0 14px;background:#fff;transition:border-color .15s,box-shadow .15s}
+  .money:focus-within{border-color:var(--brand);box-shadow:0 0 0 4px var(--brand-soft)}
+  .money span{font-size:18px;font-weight:600;color:var(--muted);margin-right:6px}
+  .money input{border:0;outline:0;font:inherit;font-size:20px;font-weight:700;width:100%;padding:11px 0;background:transparent;color:var(--ink)}
+  .money input::placeholder{font-size:15px;font-weight:500;color:#a8a8a8}
+  select:invalid,select option[value=""]{color:#a8a8a8}
+  select{width:100%;appearance:none;-webkit-appearance:none;font:inherit;font-size:16px;font-weight:600;padding:14px 40px 14px 14px;border:1.5px solid var(--line);border-radius:12px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23757575' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 14px center;color:var(--ink);outline:0}
+  select:focus{border-color:var(--brand);box-shadow:0 0 0 4px var(--brand-soft)}
+  .sec-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+  .reset{border:0;background:none;font:inherit;font-size:13px;font-weight:600;color:var(--brand);cursor:pointer;padding:4px 6px;border-radius:6px}
+  .reset:hover{background:var(--brand-soft)}
+  .msg{font-size:13px;color:var(--amber);background:var(--amber-soft);border-radius:10px;padding:9px 12px;margin:-4px 0 14px}
+  .msg[hidden]{display:none}
+  .used{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;background:var(--bg);border-radius:12px;padding:12px 14px;margin-bottom:18px}
+  .used b{font-size:15px;white-space:nowrap}
+  .used .t{font-size:13px;font-weight:600;color:var(--ink-2)}
+  .used .t span{display:block;font-weight:400;font-size:12px;color:var(--muted);margin-top:2px}
+
+  .net-band{background:#0f0f0f;color:#fff;border-radius:14px;padding:22px 24px}
+  .net-band .lbl{font-size:13px;font-weight:600;color:#bdbdbd;text-transform:uppercase;letter-spacing:.06em}
+  .net-band .net{font-size:clamp(40px,6vw,56px);font-weight:800;letter-spacing:-.03em;margin:4px 0 0}
+
+  .see-more{margin-top:16px;width:100%;display:flex;align-items:center;justify-content:center;gap:8px;border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:13px;font:inherit;font-size:14px;font-weight:700;color:var(--brand);cursor:pointer;transition:.15s}
+  .see-more[hidden]{display:none}
+  .see-more:hover{border-color:var(--brand);background:var(--brand-soft)}
+  .see-more svg{transition:transform .2s}
+  .see-more[aria-expanded=true] svg{transform:rotate(180deg)}
+
+  #results,#rresults{scroll-margin-top:130px}
+  #results[hidden],#rresults[hidden]{display:none}
+  .bd{padding:6px 28px 8px}
+  @media (max-width:600px){.bd{padding:6px 20px 8px}}
+  .bd .sec-t{margin:22px 0 6px}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  .bd td{padding:9px 0;border-bottom:1px solid #f2f2f2;vertical-align:top}
+  .bd td:last-child{text-align:right;font-weight:600;white-space:nowrap;padding-left:12px}
+  .bd td .n{display:block;font-size:12px;color:var(--muted);font-weight:400;margin-top:1px}
+  .bd tr.tot td{border-bottom:0;border-top:1.5px solid var(--ink);font-weight:700;padding-top:10px}
+  .ctc,.netrow{margin:10px 28px 0;padding:16px 18px;border-radius:12px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  @media (max-width:600px){.ctc,.netrow{margin:10px 20px 0}}
+  .ctc{background:var(--brand-soft);color:var(--brand-2)}
+  .ctc .t{font-weight:700}
+  .ctc .t span{display:block;font-weight:400;font-size:12px;color:#6b5aa8;margin-top:2px}
+  .ctc .v,.netrow .v{font-size:22px;font-weight:800}
+  .netrow{background:var(--green-soft);color:var(--green);font-weight:700}
+  .actions{display:flex;gap:10px;padding:20px 28px 24px;flex-wrap:wrap}
+  .btn{border:1.5px solid var(--line);background:#fff;font:inherit;font-size:13px;font-weight:600;padding:9px 14px;border-radius:10px;cursor:pointer;color:var(--ink);display:inline-flex;align-items:center;gap:6px}
+  .btn:hover{border-color:var(--ink)}
+  .btn.primary{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+  .disclaimer{display:flex;gap:10px;background:var(--amber-soft);color:var(--amber);border-radius:12px;padding:12px 14px;font-size:13px}
+  .disclaimer p{margin:0}
+  .disclaimer p + p{margin-top:4px}
+
+  /* Grids */
+  .tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table.grid{font-size:13.5px;min-width:640px}
+  table.grid th{background:#fafafa;text-align:left;font-size:12px;font-weight:700;color:var(--ink-2);padding:10px 14px;border-bottom:1px solid var(--line);white-space:nowrap}
+  table.grid td{padding:11px 14px;border-bottom:1px solid #f2f2f2;text-align:left;vertical-align:top}
+  table.grid td.r,table.grid th.r{text-align:right;white-space:nowrap}
+  table.grid td:first-child{font-weight:600;white-space:nowrap}
+  table.grid tr:hover td{background:#fbfaff}
+  table.grid tr:last-child td{border-bottom:0}
+  table.rk th:first-child,table.rk td:first-child{position:sticky;left:0;background:#fff;z-index:1}
+  table.rk th:first-child{background:#fafafa}
+  table.notes td:first-child{width:240px;white-space:normal}
+  .foot{padding:12px 24px 18px;font-size:12.5px;color:var(--muted)}
+
+  footer{border-top:1px solid var(--line);background:#fff}
+  footer .bar{font-size:12px;color:var(--muted)}
+  .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:10px 16px;border-radius:10px;font-size:13px;font-weight:600;opacity:0;transition:.2s;pointer-events:none}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  @media print{
+    header,.hero,main[hidden],.actions,footer,.see-more{display:none!important}
+    main{margin:0}
+    main.calc:not([hidden]) #results,main.calc:not([hidden]) #rresults{display:block!important}
+    .card{box-shadow:none}
+    body{background:#fff}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <img src="data:image/jpeg;base64,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" alt="Urban Company logo">
+    <div class="brand-name">Urban Company</div>
+  </div>
+  <nav class="tabs" aria-label="Sections">
+    <div class="tabs-in">
+      <a href="#net-to-gross" data-tab="net-to-gross">Net to Gross Calculator</a>
+      <a href="#rates" data-tab="rates">Rates</a>
+      <a href="#reckoner" data-tab="reckoner">Ready reckoner</a>
+      <a href="#notes" data-tab="notes">Notes</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-in">
+    <h1 id="heroTitle">Net to Gross Calculator — Non-FTE offers</h1>
+    <p id="heroText">Enter the net take home and state. Everything below calculates.</p>
+  </div>
+</section>
+
+<!-- NET TO GROSS CALCULATOR -->
+<main class="page calc" data-page="net-to-gross">
+  <div class="card calc-card">
+    <div class="sec-row"><div class="sec-t" style="margin:0">Inputs</div><button type="button" class="reset" id="reset">Reset</button></div>
+    <div class="calc-fields">
+      <div class="field">
+        <label for="netIn">Net Take Home</label>
+        <div class="money"><span>₹</span><input id="netIn" class="num" inputmode="numeric" autocomplete="off" value="" placeholder="Enter amount"></div>
+        <div class="hint">The monthly in-hand figure you want to offer</div>
+      </div>
+      <div class="field">
+        <label for="state2">State</label>
+        <select id="state2" required></select>
+        <div class="hint">Pick from the dropdown list</div>
+      </div>
+    </div>
+    <div class="msg" id="msg" role="status" aria-live="polite" hidden></div>
+    <div class="used">
+      <div class="t">Basic used<span>State floor. Capped at gross where gross is below the floor.</span></div>
+      <b class="num" id="rbasicUsed"></b>
+    </div>
+
+    <div class="net-band">
+      <div class="lbl">Monthly gross salary</div>
+      <div class="net num" id="rgross"></div>
+      <div id="rnote" style="color:#cfcfcf;font-size:13px;margin-top:6px"></div>
+    </div>
+
+    <button class="see-more" id="rtoggleBd" aria-expanded="false" aria-controls="rresults">
+      <span id="rtoggleBdText">See detailed breakdown</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+  </div>
+
+  <div class="card" id="rresults" hidden>
+    <div class="bd">
+      <div class="sec-t">Pay heads</div>
+      <table id="rtPay"></table>
+      <div class="sec-t">Employer's contribution</div>
+      <table id="rtEmp"></table>
+    </div>
+    <div class="ctc">
+      <div class="t">Cost to Company (CTC)<span>Excludes vendor service charge, which is an invoice item</span></div>
+      <div class="v num" id="rctc"></div>
+    </div>
+    <div class="bd">
+      <div class="sec-t">Deductions</div>
+      <table id="rtDed"></table>
+    </div>
+    <div class="netrow"><div>Net Take Home</div><div class="v num" id="rnet2"></div></div>
+    <div class="actions">
+      <button class="btn primary" id="rshare">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        Copy link</button>
+      <button class="btn" id="rprint">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        Print / Save PDF</button>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:1px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    <div>
+      <p>Treat the net figure as an estimate. Actual deductions vary with payable days, the state deduction cycle and income tax.</p>
+      <p>Income tax is not included. It depends on the regime, declarations and investments.</p>
+    </div>
+  </div>
+</main>
+
+<!-- RATES -->
+<main class="page" data-page="rates" hidden>
+  <div class="card">
+    <div class="tw"><table class="grid" id="tRates"></table></div>
+  </div>
+  <div class="card">
+    <div class="card-h"><h2>Statutory rates used by the calculator</h2></div>
+    <div class="tw"><table class="grid" id="tStat"></table></div>
+    <div class="foot">Service charge is not shown on the associate compensation sheet. It is an invoice item.</div>
+  </div>
+</main>
+
+<!-- READY RECKONER -->
+<main class="page" data-page="reckoner" hidden>
+  <div class="card">
+    <div class="tw"><table class="grid rk" id="tRk"></table></div>
+    <div class="foot">Where gross is below the state Basic floor, the floor applies and Basic equals gross. Those cases need checking individually.</div>
+  </div>
+</main>
+
+<!-- NOTES -->
+<main class="page" data-page="notes" hidden>
+  <div class="card">
+    <div class="tw"><table class="grid notes" id="tNotes"></table></div>
+  </div>
+</main>
+
+<footer><div class="bar">© Urban Company</div></footer>
+<div class="toast" id="toast">Link copied</div>
+
+<script>
+/* ---------- GOOGLE SHEET SAVING ----------
+   Served by the Apps Script web app: window.__APP__ is injected and rows are saved with google.script.run.
+   Hosted elsewhere: paste the Apps Script Web App URL (ends in /exec) below, or leave "" to switch saving off. */
+const SHEET_WEBAPP_URL = "";
+const APP = window.__APP__ || null;
+
+/* ---------- RATES (edit here) — exactly as the "Rates" sheet ---------- */
+const STATES = [
+  {n:"MAHARASHTRA",    floor:21500, pt:200, ptBasis:"Monthly",     lwfE:0,  lwfR:0,  lwfBasis:"Half-yearly", notes:"PT ₹300 in February. LWF deducted in June and December"},
+  {n:"KARNATAKA",      floor:21500, pt:200, ptBasis:"Monthly",     lwfE:0,  lwfR:0,  lwfBasis:"Annual",      notes:"LWF deducted in December"},
+  {n:"DELHI",          floor:22500, pt:0,   ptBasis:"Nil",         lwfE:0,  lwfR:0,  lwfBasis:"Half-yearly", notes:"No professional tax in Delhi"},
+  {n:"HARYANA",        floor:21500, pt:0,   ptBasis:"Nil",         lwfE:35, lwfR:70, lwfBasis:"Monthly",     notes:"No professional tax. LWF deducted every month"},
+  {n:"TELANGANA",      floor:21500, pt:200, ptBasis:"Monthly",     lwfE:0,  lwfR:0,  lwfBasis:"Annual",      notes:""},
+  {n:"UTTAR PRADESH",  floor:21500, pt:0,   ptBasis:"Nil",         lwfE:0,  lwfR:0,  lwfBasis:"Annual",      notes:"No professional tax in UP"},
+  {n:"WEST BENGAL",    floor:21500, pt:150, ptBasis:"Monthly",     lwfE:0,  lwfR:0,  lwfBasis:"Half-yearly", notes:"Slab-based: ₹110 / ₹130 / ₹150 / ₹200. ₹150 is the common case"},
+  {n:"TAMILNADU",      floor:21500, pt:0,   ptBasis:"Half-yearly", lwfE:0,  lwfR:0,  lwfBasis:"Annual",      notes:"PT charged half-yearly, around ₹425 per cycle. Shows nil in most months"},
+  {n:"GUJARAT",        floor:21500, pt:200, ptBasis:"Monthly",     lwfE:0,  lwfR:0,  lwfBasis:"Half-yearly", notes:""},
+  {n:"ASSAM",          floor:21500, pt:208, ptBasis:"Monthly",     lwfE:0,  lwfR:0,  lwfBasis:"Annual",      notes:""},
+  {n:"ANDHRA PRADESH", floor:21500, pt:200, ptBasis:"Monthly",     lwfE:0,  lwfR:0,  lwfBasis:"Annual",      notes:""},
+  {n:"BIHAR",          floor:21500, pt:83,  ptBasis:"Monthly",     lwfE:0,  lwfR:0,  lwfBasis:"Annual",      notes:"Charged as an annual amount spread monthly"},
+  {n:"RAJASTHAN",      floor:21500, pt:0,   ptBasis:"Nil",         lwfE:0,  lwfR:0,  lwfBasis:"Nil",         notes:"No professional tax in Rajasthan"},
+  {n:"CHANDIGARH",     floor:21500, pt:0,   ptBasis:"Nil",         lwfE:5,  lwfR:20, lwfBasis:"Monthly",     notes:"No professional tax"},
+  {n:"ORISSA",         floor:21500, pt:0,   ptBasis:"Periodic",    lwfE:0,  lwfR:0,  lwfBasis:"Half-yearly", notes:"Register shows nil in September. Confirm the deduction cycle"},
+  {n:"MADHYA PRADESH", floor:21500, pt:167, ptBasis:"Monthly",     lwfE:0,  lwfR:0,  lwfBasis:"Half-yearly", notes:"Varies ₹143 to ₹182 by slab. ₹167 is the common case"},
+  {n:"KERALA",         floor:21500, pt:0,   ptBasis:"Half-yearly", lwfE:50, lwfR:50, lwfBasis:"Monthly",     notes:"PT charged half-yearly, around ₹450 per cycle"},
+  {n:"CHHATTISGARH",   floor:21500, pt:0,   ptBasis:"Periodic",    lwfE:0,  lwfR:0,  lwfBasis:"Half-yearly", notes:"Register shows nil in September"},
+];
+const R = { pfCap:25000, pfEmp:.12, pfEr:.12, edli:.005, admin:.005, esiLimit:21000, esiEmp:.0075, esiEr:.0325, insurance:340, hraCapPct:.5 };
+
+function calc(gross, st){
+  gross = Math.max(0, Math.round(gross||0));
+  const basic = Math.min(st.floor, gross);
+  const hra   = Math.max(0, Math.min(gross - basic, Math.round(basic*R.hraCapPct)));
+  const conv  = Math.max(0, gross - basic - hra);
+  const pfw   = Math.min(basic, R.pfCap);
+  const pfEmp = Math.round(pfw*R.pfEmp);
+  const erPf  = Math.round(pfw*R.pfEr) + Math.round(pfw*R.edli) + Math.round(pfw*R.admin);
+  const esiOn = gross>0 && gross <= R.esiLimit;
+  const esiEmp = esiOn ? Math.ceil(gross*R.esiEmp) : 0;
+  const esiEr  = esiOn ? Math.ceil(gross*R.esiEr) : 0;
+  const ded = pfEmp + esiEmp + st.pt + st.lwfE;
+  const contrib = erPf + esiEr + st.lwfR + R.insurance;
+  return {gross,basic,hra,conv,pfEmp,erPf,esiEmp,esiEr,pt:st.pt,lwfE:st.lwfE,lwfR:st.lwfR,ins:R.insurance,ded,contrib,ctc:gross+contrib,net:gross-ded};
+}
+
+/* ---------- Helpers ---------- */
+const $ = id => document.getElementById(id);
+const fmt = n => "₹" + Math.round(n).toLocaleString("en-IN");
+const val = n => n ? fmt(n) : "-";          // sheet shows "-" for zero
+const plain = n => n ? Math.round(n).toLocaleString("en-IN") : "-";
+const parse = s => Number(String(s).replace(/[^\d]/g,"")) || 0;
+
+/* ---------- Inputs ---------- */
+const sel2 = $("state2");
+STATES.forEach((s,i)=>{ const o=document.createElement("option"); o.value=i; o.textContent=s.n; sel2.appendChild(o); });
+{ const o=document.createElement("option"); o.value=""; o.textContent="Select state"; o.disabled=true; o.selected=true; sel2.insertBefore(o, sel2.firstChild); }
+sel2.value = "";
+
+const row = (label, v, note, tot) =>
+  `<tr${tot?' class="tot"':''}><td>${label}${note?`<span class="n">${note}</span>`:""}</td><td class="num">${val(v)}</td></tr>`;
+
+function fillBreakdown(c, p){
+  $(p+"tPay").innerHTML =
+    row("Basic", c.basic) +
+    row("House Rent Allowance", c.hra, "Balance after Basic, capped at 50% of Basic") +
+    row("Conveyance", c.conv, "Whatever remains") +
+    row("Gross Salary", c.gross, "", true);
+
+  $(p+"tEmp").innerHTML =
+    row("Employer PF", c.erPf, "12% plus EDLI and admin, each 0.5%, all on Basic capped at ₹25,000") +
+    row("Employer ESI", c.esiEr, "Only where gross is ₹21,000 or less") +
+    row("Employer Labour Welfare Fund", c.lwfR, "Monthly equivalent. Several states deduct periodically") +
+    row("Insurance", c.ins) +
+    row("Total Contribution", c.contrib, "", true);
+  $(p+"ctc").textContent = fmt(c.ctc);
+
+  $(p+"tDed").innerHTML =
+    row("Provident Fund", c.pfEmp, "12% of Basic, capped at ₹25,000") +
+    row("Employee ESI", c.esiEmp) +
+    row("Professional Tax", c.pt, "Monthly equivalent. Tamil Nadu and Kerala are charged half-yearly") +
+    row("Labour Welfare Fund", c.lwfE) +
+    row("Total Deduction", c.ded, "", true);
+
+  $(p+"net2").textContent = fmt(c.net);
+}
+
+/* ---------- Shareable link (opens with the same inputs) ---------- */
+const slug = s => s.replace(/ /g,"-").toLowerCase();
+function buildLink(){
+  const base = APP ? APP.base : location.href.split(/[?#]/)[0];
+  const q = new URLSearchParams();
+  const net = parse($("netIn").value), st = STATES[sel2.value];
+  if (net) q.set("net", net);
+  if (st) q.set("state", slug(st.n));
+  if (typeof currentTab !== "undefined" && currentTab !== "net-to-gross") q.set("tab", currentTab);
+  const qs = q.toString();
+  return qs ? base + "?" + qs : base;
+}
+function syncUrl(){ if (APP) return; try { history.replaceState(null, "", buildLink()); } catch(e){} }
+
+/* ---------- Net to Gross (Calculator-tab rules, solved in reverse) ---------- */
+// Smallest gross whose Net Take Home is at least the target.
+function solveGross(target, st){
+  if (target <= 0) return 0;
+  let lo = 0, hi = 10000000;
+  if (calc(hi, st).net < target) return null;
+  while (lo < hi){ const mid = Math.floor((lo+hi)/2); if (calc(mid, st).net >= target) hi = mid; else lo = mid + 1; }
+  return lo;
+}
+function render(){
+  const st = STATES[sel2.value];
+  const target = parse($("netIn").value);
+  const MAX = 5000000;                           // ₹50 lakh a month — guards against typos
+  let msg = "";
+  if (target && !st) msg = "Select a state to calculate the gross salary.";
+  else if (st && !target && $("netIn").value !== "") msg = "Enter a net take home amount greater than zero.";
+  else if (target > MAX) msg = "Enter a monthly net take home of ₹50,00,000 or less.";
+  $("msg").textContent = msg; $("msg").hidden = !msg;
+  const ready = !!(st && target && target <= MAX);
+  $("rtoggleBd").hidden = !ready;
+  if (!ready){                                   // blank until both inputs are filled
+    $("rbasicUsed").textContent = "-"; $("rgross").textContent = "-"; $("rnote").textContent = "";
+    $("rresults").hidden = true; $("rtoggleBd").setAttribute("aria-expanded", false);
+    $("rtoggleBdText").textContent = "See detailed breakdown";
+    syncUrl(); return;
+  }
+  const g = solveGross(target, st);
+  if (g === null){ $("rgross").textContent = "-"; $("rnote").textContent = ""; return; }
+  const c = calc(g, st);
+  $("rbasicUsed").textContent = val(c.basic);
+  $("rgross").textContent = fmt(c.gross);
+  $("rnote").textContent = (target && c.net !== target) ? "Net Take Home at this gross: " + fmt(c.net) : "";
+  fillBreakdown(c, "r");
+  syncUrl();
+}
+$("netIn").addEventListener("input", e=>{
+  const v = parse(e.target.value);
+  const pos = e.target.value.length - e.target.selectionStart;
+  e.target.value = v ? v.toLocaleString("en-IN") : "";
+  try{ const p = e.target.value.length - pos; e.target.setSelectionRange(p,p);}catch(_){}
+  render(); queueSave();
+});
+sel2.addEventListener("change", ()=>{ render(); queueSave(); });
+
+$("reset").onclick = ()=>{
+  $("netIn").value = ""; sel2.value = "";
+  render(); $("netIn").focus();
+};
+
+/* ---------- Save each calculation to the Google Sheet ---------- */
+const SESSION_ID = Math.random().toString(36).slice(2,10);
+let lastSaved = "", saveTimer = null, interacted = false;
+function saveToSheet(){
+  clearTimeout(saveTimer);
+  const viaApp = APP && window.google && google.script && google.script.run;
+  if (!(viaApp || SHEET_WEBAPP_URL.indexOf("http")===0) || !interacted) return;
+  const st = STATES[sel2.value], target = parse($("netIn").value);
+  if (!st || !target) return;
+  const g = solveGross(target, st);
+  if (!g) return;
+  const key = g+"|"+st.n+"|"+target;
+  if (key === lastSaved) return;           // don't save the same calculation twice
+  lastSaved = key;
+  const c = calc(g, st);
+  const row = [g, st.n, "", c.basic, c.basic, c.hra, c.conv, c.gross,
+               c.erPf, c.esiEr, c.lwfR, c.ins, c.contrib, c.ctc,
+               c.pfEmp, c.esiEmp, c.pt, c.lwfE, c.ded, c.net, SESSION_ID, buildLink(),
+               "Net to Gross", target];
+  try {
+    if (viaApp) { google.script.run.saveRow(row); return; }
+    fetch(SHEET_WEBAPP_URL, {method:"POST", mode:"no-cors", headers:{"Content-Type":"text/plain;charset=utf-8"}, body: JSON.stringify({row})});
+  } catch(e) {}
+}
+function queueSave(){ interacted = true; clearTimeout(saveTimer); saveTimer = setTimeout(saveToSheet, 2500); }
+window.addEventListener("pagehide", saveToSheet);
+
+/* ---------- Buttons ---------- */
+$("rtoggleBd").onclick=()=>{
+  interacted=true; saveToSheet();
+  const open=$("rresults").hidden; $("rresults").hidden=!open; $("rtoggleBd").setAttribute("aria-expanded",open);
+  $("rtoggleBdText").textContent = open ? "Hide detailed breakdown" : "See detailed breakdown";
+  if(open) $("rresults").scrollIntoView({behavior:"smooth",block:"start"});
+};
+$("rprint").onclick=()=>{ interacted=true; saveToSheet(); window.print(); };
+$("rshare").onclick=async()=>{
+  interacted=true; saveToSheet();
+  const link = buildLink();
+  try{ await navigator.clipboard.writeText(link); }catch(e){
+    const t=document.createElement("textarea"); t.value=link; document.body.appendChild(t); t.select(); document.execCommand("copy"); t.remove();
+  }
+  const t=$("toast"); t.classList.add("show"); setTimeout(()=>t.classList.remove("show"),1600);
+};
+
+/* ---------- Rates tab ---------- */
+$("tRates").innerHTML =
+  `<tr><th>State</th><th class="r">Basic floor</th><th class="r">PT (monthly)</th><th>PT basis</th><th class="r">LWF employee</th><th class="r">LWF employer</th><th>LWF basis</th><th>Notes</th></tr>` +
+  STATES.map(s=>`<tr><td>${s.n}</td><td class="r num">${plain(s.floor)}</td><td class="r num">${plain(s.pt)}</td><td>${s.ptBasis}</td><td class="r num">${plain(s.lwfE)}</td><td class="r num">${plain(s.lwfR)}</td><td>${s.lwfBasis}</td><td>${s.notes}</td></tr>`).join("");
+$("tStat").innerHTML = `<tr><th>Item</th><th>Rule</th><th>Note</th></tr>` + [
+  ["Employee PF","12% of PF wages, capped at ₹25,000",""],
+  ["Employer PF","12% of PF wages, capped at ₹25,000",""],
+  ["EDLI","0.5% of PF wages, capped at ₹25,000",""],
+  ["PF admin charges","0.5% of PF wages, capped at ₹25,000",""],
+  ["PF wages","Basic only","HRA and conveyance are excluded under Section 2(88)"],
+  ["Employee ESI","0.75% of gross","Applies only where gross is ₹21,000 or less"],
+  ["Employer ESI","3.25% of gross","Applies only where gross is ₹21,000 or less"],
+  ["Insurance","₹340 per month","Flat, all associates"],
+  ["HRA","Gross less Basic, capped at 50% of Basic",""],
+  ["Conveyance","Whatever remains after Basic and HRA",""],
+].map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td></tr>`).join("");
+
+/* ---------- Ready reckoner tab — values exactly as the sheet ---------- */
+const RK_HEAD = ["HARYANA","DELHI","UTTAR PRADESH","MAHARASHTRA","KARNATAKA","TELANGANA","WEST BENGAL","GUJARAT","TAMILNADU","RAJASTHAN"];
+const RK = [
+  [22000,19385,19300,19420,19220,19220,19220,19270,19220,19420,19420],
+  [24000,21385,21300,21420,21220,21220,21220,21270,21220,21420,21420],
+  [26000,23385,23300,23420,23220,23220,23220,23270,23220,23420,23420],
+  [28000,25385,25300,25420,25220,25220,25220,25270,25220,25420,25420],
+  [30000,27385,27300,27420,27220,27220,27220,27270,27220,27420,27420],
+  [32000,29385,29300,29420,29220,29220,29220,29270,29220,29420,29420],
+  [35000,32385,32300,32420,32220,32220,32220,32270,32220,32420,32420],
+  [38000,35385,35300,35420,35220,35220,35220,35270,35220,35420,35420],
+  [42000,39385,39300,39420,39220,39220,39220,39270,39220,39420,39420],
+  [46000,43385,43300,43420,43220,43220,43220,43270,43220,43420,43420],
+  [50000,47385,47300,47420,47220,47220,47220,47270,47220,47420,47420],
+];
+$("tRk").innerHTML = `<tr><th>Gross</th>${RK_HEAD.map(h=>`<th class="r">${h}</th>`).join("")}</tr>` +
+  RK.map(r=>`<tr>${r.map((v,i)=>`<td class="${i?'r ':''}num">${plain(v)}</td>`).join("")}</tr>`).join("");
+
+/* ---------- Notes tab — exactly as the sheet ---------- */
+$("tNotes").innerHTML = `<tr><th>Topic</th><th>Detail</th></tr>` + [
+  ["How the structure is built","Basic is set at the state floor — ₹22,500 in Delhi, ₹21,500 elsewhere. HRA takes the balance up to a cap of 50% of Basic. Conveyance takes whatever remains. This matches the September 2026 register for 2,261 full-attendance associates."],
+  ["Why Basic does not scale","Basic is set by the applicable minimum wage for the city and skill category, not as a percentage of gross. Two associates on very different gross salaries in the same city carry the same Basic."],
+  ["PF wages","Basic only. HRA and conveyance are excluded under Section 2(88), so Provident Fund is calculated on Basic alone and capped at ₹25,000."],
+  ["Effect of the ceiling revision","At a Basic of ₹21,500, the employee contribution moves from ₹1,800 to ₹2,580, an increase of ₹780. Only associates with Basic at or above ₹25,000 reach the full ₹1,200 increase."],
+  ["What is not included","Income tax, incentives, arrears, reimbursements, gratuity and the vendor service charge. The service charge is an invoice item and does not appear on the associate compensation sheet."],
+  ["Periodic deductions — confirm","Professional tax in Tamil Nadu and Kerala is charged half-yearly, so it shows as nil in most months. Labour Welfare Fund is monthly only in Haryana, Chandigarh and Kerala; elsewhere it is half-yearly or annual. The calculator shows a monthly equivalent, so a given month may differ."],
+  ["Rates to verify with Quess","Orissa and Chhattisgarh show nil professional tax in the September register. West Bengal and Madhya Pradesh are slab-based and the calculator uses the most common slab. Confirm these before quoting in those states."],
+  ["Use in conversations","Describe the output as an estimate. Actual net pay varies with payable days, the state deduction cycle and income tax."],
+].map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join("");
+
+/* ---------- Tabs ---------- */
+const HERO = {
+  "net-to-gross":["Net to Gross Calculator — Non-FTE offers","Enter the net take home and state. Everything below calculates."],
+  rates:["State rates — edit here; the calculator reads from this sheet","Derived from the Quess September 2026 pay register. Verify with Quess before relying on the periodic states (marked)."],
+  reckoner:["Ready reckoner — net take-home by gross and state","Monthly figures, full attendance, Basic at the state floor. Income tax not included."],
+  notes:["How this works, and what to confirm",""],
+};
+let currentTab = "net-to-gross";
+function showTab(name){
+  if(!HERO[name]) name="net-to-gross";
+  currentTab = name;
+  document.querySelectorAll("main.page").forEach(m=>m.hidden = m.dataset.page!==name);
+  document.querySelectorAll(".tabs a").forEach(a=>a.classList.toggle("on",a.dataset.tab===name));
+  $("heroTitle").textContent=HERO[name][0];
+  $("heroText").textContent=HERO[name][1]; $("heroText").hidden=!HERO[name][1];
+}
+document.querySelectorAll(".tabs a").forEach(a=>a.addEventListener("click", e=>{
+  e.preventDefault(); showTab(a.dataset.tab); window.scrollTo({top:0}); syncUrl();
+}));
+
+/* ---------- Load from link (?net=27220&state=karnataka) ---------- */
+(function(){
+  const p = new URLSearchParams(APP ? APP.query : location.search);
+  if (p.get("state")){
+    const want = p.get("state").replace(/-/g," ").toUpperCase();
+    const i = STATES.findIndex(s=>s.n===want);
+    if (i>=0) sel2.value=i;
+  }
+  if (p.get("net")) $("netIn").value = parse(p.get("net")).toLocaleString("en-IN");
+  showTab(p.get("tab") || location.hash.slice(1));
+  render();
+})();
+</script>
+</body>
+</html>
